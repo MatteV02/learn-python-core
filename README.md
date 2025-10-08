@@ -1,26 +1,22 @@
-# Object Oriented Programming (DIEF, UNIMORE)
+# \<Course Name\>
 
-## Software, Tutorials, Exercises
+## Software e Materiale Aggiuntivo
 
 ### Python
 * [Python Development Kit](https://www.python.org/downloads/)
-* [Python Tutorial](https://docs.python.org/3/tutorial/), [Python API](https://docs.python.org/3/library/)
-* [PyCharm](https://www.jetbrains.com/pycharm/), [PyCharm Resources](https://www.jetbrains.com/pycharm/learn/)
-* [Anaconda](https://www.anaconda.com/products/individual)
+* [Python API](https://docs.python.org/3/library/)
 
-### Misc
+### Visual Studio Code
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+### Guida all'installazione
+[Link](INSTALLATION_GUIDE.md)
+
+### Materiale aggiuntivo
+* [Python Tutorial](https://docs.python.org/3/tutorial/)
 * http://www.pythontutor.com/
 * https://pynative.com/
-* https://github.com/TheAlgorithms/Python
-* https://github.com/charlax/professional-programming
-
-## Books
-* Head First Python; Barry; O'Reilly (intermediate)
-* Fluent Python; Ramalho; O'Reilly (advanced)
-
-## Videos
-* [YouTube OOP Python](https://www.youtube.com/watch?v=14aWn1OZQzQ&list=PLhlcRDRHVUzR2WHN9VTPZrawqRYHz5ALF)
-* [YouTube PyCharm](https://www.youtube.com/c/PyCharmIDE/videos)
+* TODO: aggiungi qualche video per imparare di più
 
 ## Modules
 [M1] Basics
@@ -30,8 +26,7 @@
 * Numeric, strings, boolean literals
 * Flow control statements
 * Functions, parameter passing
-* Decorators
-* Exceptions
+* Exceptions (?)
 * I/O Basics
 
 [M2] Data Structures
@@ -47,3 +42,6 @@
 * Getters, setters, properties
 * Encapsulation, inheritance, polymorphism
 * Modules and packages
+
+[M4] Project
+* TBD
