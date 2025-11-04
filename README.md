@@ -1,4 +1,4 @@
-# \<Course Name\>
+# Learn Python
 
 ## Software e Materiale Aggiuntivo
 
@@ -16,9 +16,8 @@
 * [Python Tutorial](https://docs.python.org/3/tutorial/)
 * http://www.pythontutor.com/
 * https://pynative.com/
-* TODO: aggiungi qualche video per imparare di più
 
-## Modules
+## Moduli
 [M1] Basics
 
 * The Python environment
