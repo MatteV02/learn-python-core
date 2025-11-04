@@ -1,5 +1,13 @@
 # Learn Python
 
+**Indice**:
+- [Cartella col materiale delle lezioni `slides`](slides)
+- [Cartella con gli esercizi `exercises`](exercises)
+- [Cartella col materiale del progetto `project`](project)
+
+> [!WARNING]
+> La cartella col materiale del progetto per ora è vuota!
+
 ## Software e Materiale Aggiuntivo
 
 ### Python
@@ -10,7 +18,7 @@
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Guida all'installazione
-[Link](INSTALLATION_GUIDE.md)
+* [Link](INSTALLATION_GUIDE.md)
 
 ### Materiale aggiuntivo
 * [Python Tutorial](https://docs.python.org/3/tutorial/)
