@@ -53,20 +53,7 @@ if exist "!newScriptPath!" (
     )
 )
 
-:: 5. Pulizia temporanea per preparare l'aggiornamento della cartella
-del /f /q "%zipFile%" >nul 2>&1
-rmdir /s /q "%tempDir%" >nul 2>&1
-
-:: 6. Scarica nuovamente il repository per aggiornare la cartella
-echo Scaricamento del repository per aggiornare la cartella...
-curl -L -o "%zipFile%" "%repoUrl%"
-if %errorlevel% neq 0 (
-    echo Errore durante il download del repository.
-    pause
-    exit /b 1
-)
-
-:: 7. Estrai il contenuto del ZIP usando PowerShell
+:: 5. Estrai il contenuto del ZIP usando PowerShell
 echo Estrazione del repository...
 powershell -command "Expand-Archive -Path '%zipFile%' -DestinationPath '%tempDir%' -Force"
 if %errorlevel% neq 0 (
@@ -75,7 +62,7 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-:: 8. Trova la cartella principale all'interno dell'archivio
+:: 6. Trova la cartella principale all'interno dell'archivio
 set "extractedDir="
 for /d %%d in ("%tempDir%\*") do (
     set "extractedDir=%%d"
@@ -88,7 +75,7 @@ if not defined extractedDir (
     exit /b 1
 )
 
-:: 9. Copia i file nella cartella corrente (sovrascrivendo)
+:: 7. Copia i file nella cartella corrente (sovrascrivendo)
 echo Aggiornamento dei file...
 xcopy "!extractedDir!\*" "%~dp0" /E /Y /Q
 if %errorlevel% neq 0 (
@@ -97,10 +84,11 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-:: 10. Pulizia dei file temporanei
+:: 8. Pulizia dei file temporanei
 echo Pulizia dei file temporanei...
 del /f /q "%zipFile%" >nul 2>&1
 rmdir /s /q "%tempDir%" >nul 2>&1
 
+:: 9. Fine
 echo Aggiornamento completato con successo!
 pause
