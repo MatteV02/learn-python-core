@@ -14,7 +14,7 @@ curl -L -o "%zipFile%" "%repoUrl%"
 if %errorlevel% neq 0 (
     echo Errore durante il download del repository.
     pause
-    exit /b 1
+    exit
 )
 
 :: 2. Estrai il contenuto del ZIP usando PowerShell
@@ -23,7 +23,7 @@ powershell -command "Expand-Archive -Path '%zipFile%' -DestinationPath '%tempDir
 if %errorlevel% neq 0 (
     echo Errore durante l'estrazione del repository.
     pause
-    exit /b 1
+    exit
 )
 
 :: 3. Trova la cartella principale all'interno dell'archivio
@@ -36,7 +36,7 @@ for /d %%d in ("%tempDir%\*") do (
 if not defined extractedDir (
     echo Nessuna cartella trovata nell'archivio.
     pause
-    exit /b 1
+    exit
 )
 
 :: 4. Verifica se esiste una nuova versione dello script
@@ -49,7 +49,7 @@ if exist "!newScriptPath!" (
         copy /Y "!newScriptPath!" "%~f0" >nul
         echo Script autoaggiornato. Riavvia lo script per applicare le modifiche.
         pause
-        exit /b 0
+        exit
     )
 )
 
@@ -63,7 +63,7 @@ for /d %%d in ("%tempDir%\*") do (
 if not defined extractedDir (
     echo Nessuna cartella trovata nell'archivio.
     pause
-    exit /b 1
+    exit
 )
 
 :: 6. Copia i file nella cartella corrente (sovrascrivendo)
@@ -72,7 +72,7 @@ xcopy "!extractedDir!\*" "%~dp0" /E /Y /Q
 if %errorlevel% neq 0 (
     echo Errore durante la copia dei file.
     pause
-    exit /b 1
+    exit
 )
 
 :: 7. Pulizia dei file temporanei
