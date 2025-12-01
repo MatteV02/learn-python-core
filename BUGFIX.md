@@ -2,6 +2,14 @@
 
 aka, come risolvere facilmente i problemi di Jupyter Notebook.  
 
+1. **Errori / Eccessiva lentezza nell'esecuzione**
+1. **Errori relativi a variabili che non avete dichiarato**
+1. **Cartella chiusa?**
+1. **Cartella mancante**
+1. **Mancanza di slide/esercitazioni**
+
+---
+
 1. **Errori / Eccessiva lentezza nell'esecuzione** → Riavvio del kernel o riavvio di VSCode
 ![bugfix-1.png](assets/images/bugfix-1.png)
 
