@@ -40,7 +40,7 @@ if not defined extractedDir (
 )
 
 :: 4. Verifica se esiste una nuova versione dello script
-set "newScriptPath=%extractedDir%\update_repo.bat"
+set "newScriptPath=%extractedDir%\update.bat"
 if exist "!newScriptPath!" (
     :: Confronta i file: se sono diversi, aggiorna lo script
     fc /b "%~f0" "!newScriptPath!" >nul
