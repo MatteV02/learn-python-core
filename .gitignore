@@ -9,4 +9,4 @@ requirements-notebook-translator.txt
 slides/traduci_notebook.py
 
 # exercises solutions
-**/*solutions*
+#**/*solutions*
